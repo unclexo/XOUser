@@ -1,0 +1,38 @@
+<section class="login">
+	<h2>Login</h2>
+	<?php if ($this->error) : ?>
+		<p class="error">Username or password did not match!</p>
+	<?php endif; ?>
+
+	<?php 
+		$form = $this->form;
+        $form->setAttribute('action', $this->url('auth/login', array(
+            'controller' => 'xologin',
+            'action' => 'process',
+        )));
+        $form->prepare();
+		echo $this->form()->openTag($form);
+	 ?>
+
+	<dl class="login-form">
+		<dt><?php echo $this->formLabel($form->get('username')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('username')); ?>
+			<?php echo $this->formElementErrors($form->get('username')); ?>
+		</dd>
+
+		<dt><?php echo $this->formLabel($form->get('password')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('password')); ?>
+			<?php echo $this->formElementErrors($form->get('password')); ?>
+		</dd>
+
+		<dd>
+			<?php echo $this->formElement($form->get('login')); ?>
+			<?php echo $this->formElementErrors($form->get('login')); ?>
+			<?php echo $this->formElement($form->get('csrf')); ?>
+		</dd>
+
+	</dl>
+	<?php echo $this->form()->closeTag(); ?>
+</section>

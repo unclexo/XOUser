@@ -1,0 +1,20 @@
+
+{
+    "name": "unclexo/xo-user",
+    "type": "library",
+    "description": "A ZF2 module for user authentication which manages user sessions in database.",
+    "keywords": ["Auth","zf2","Db","Session",],
+    "homepage": "https://github.com/unclexo/XOUser",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jobaer",
+            "email": "abujobaer@gmail.com",
+            "homepage": "http://unclexo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+}

@@ -1,0 +1,46 @@
+<section class="change-password">
+	<h2>Change password</h2>
+	<?php if ($this->error) : ?>
+		<p class="error">Problem occured while password update!</p>
+	<?php elseif ($this->success) : ?>
+		<p class="success">Password has been changed successfully!</p>	
+	<?php endif; ?>
+	<?php 
+		$form = $this->form;
+		$form->setAttribute('action', $this->url('auth/change_password', array(
+			'controller' => 'xochangepassword',
+			'action' => 'process',
+		)));
+		$form->prepare();
+		echo $this->form()->openTag($form);
+	 ?>
+
+	<dl class="change-password-form">		
+
+		<dt><?php echo $this->formLabel($form->get('password')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('password')); ?>
+			<?php echo $this->formElementErrors($form->get('password')); ?>
+		</dd>
+
+		<dt><?php echo $this->formLabel($form->get('new_password')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('new_password')); ?>
+			<?php echo $this->formElementErrors($form->get('new_password')); ?>
+		</dd>		
+
+		<dt><?php echo $this->formLabel($form->get('repeat_new_password')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('repeat_new_password')); ?>
+			<?php echo $this->formElementErrors($form->get('repeat_new_password')); ?>
+		</dd>		
+
+		<dd>
+			<?php echo $this->formElement($form->get('change_password')); ?>
+			<?php echo $this->formElementErrors($form->get('change_password')); ?>
+			<?php echo $this->formElement($form->get('csrf')); ?>
+		</dd>
+
+	</dl>
+	<?php echo $this->form()->closeTag(); ?>
+</section>

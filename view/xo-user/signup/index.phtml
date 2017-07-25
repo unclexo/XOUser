@@ -1,0 +1,52 @@
+<section class="xosignup">
+	<h2>Sign up</h2>
+	<?php if ($this->error) : ?>
+		<p class="error">Unknown problem occured while singing up!</p>
+	<?php elseif ($this->success) : ?>
+		<p class="success">Thank you for signing up! Please <a href="<?php echo $this->url('auth') ?>">Login here</a>.</p>
+	<?php endif; ?>
+		
+	<?php 
+		$form = $this->form;
+		$form->setAttribute('action', $this->url('auth/signup', array(
+			'controller' => 'xosignup',
+			'action' => 'process',
+		)));
+		$form->prepare();
+		echo $this->form()->openTag($form);
+	 ?>
+
+	<dl class="signup-form">
+		<dt><?php echo $this->formLabel($form->get('username')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('username')); ?>
+			<?php echo $this->formElementErrors($form->get('username')); ?>
+		</dd>
+
+		<dt><?php echo $this->formLabel($form->get('email')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('email')); ?>
+			<?php echo $this->formElementErrors($form->get('email')); ?>
+		</dd>		
+
+		<dt><?php echo $this->formLabel($form->get('password')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('password')); ?>
+			<?php echo $this->formElementErrors($form->get('password')); ?>
+		</dd>
+
+		<dt><?php echo $this->formLabel($form->get('repeat_password')); ?></dt>
+		<dd>
+			<?php echo $this->formElement($form->get('repeat_password')); ?>
+			<?php echo $this->formElementErrors($form->get('repeat_password')); ?>
+		</dd>		
+
+		<dd>
+			<?php echo $this->formElement($form->get('signup')); ?>
+			<?php echo $this->formElementErrors($form->get('signup')); ?>
+			<?php echo $this->formElement($form->get('csrf')); ?>
+		</dd>
+
+	</dl>
+	<?php echo $this->form()->closeTag(); ?>
+</section>
