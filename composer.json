@@ -3,7 +3,7 @@
     "name": "unclexo/xo-user",
     "type": "library",
     "description": "A ZF2 module for user authentication and managing user sessions in database.",
-    "keywords": ["Auth","zf2","Db","Session"],
+    "keywords": ["auth","user-authentication","session","session-management","save-handlers","db","zf2","zf2-module"],
     "homepage": "https://github.com/unclexo/XOUser",
     "license": "MIT",
     "authors": [
