@@ -15,6 +15,26 @@ Features
 Installation
 ------------
 
+### Using composer:
+
+1. In your project, use the following command on your terminal.
+
+```bash
+  composer require unclexo/xo-user
+```
+
+2. Add this `XOUser` module name in your `application.config.php` file.
+
+```php
+<?php
+  return array(
+    'modules' => array(
+      // ...
+      'XOUser',
+    ),
+  );
+```
+
 ### Database Config:
 
 XOUser expects and assumes you have a valid database configuration under a top key named `db`.
