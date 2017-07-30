@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "zendframework/skeleton-application": ">=2.2.7,<=2.5.0"
+        "zendframework/skeleton-application": ">=2.2.7,<3.0"
     },
     "autoload": {
         "psr-0": {
