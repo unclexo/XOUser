@@ -15,12 +15,8 @@
         }
     ],
     "require": {
-<<<<<<< HEAD
         "php": ">=5.3.3",
-        "zendframework/skeleton-application": ">2.2,<3"
-=======
-        "php": ">=5.3.3"
->>>>>>> parent of bc6304e... Added skeleton-application as require component
+        "zendframework/skeleton-application": ">=2.2.7,<3"
     },
     "autoload": {
         "psr-0": {
