@@ -3,11 +3,18 @@ Introduction
 
 XOUser is a skeleton module for user authentication and registration for Zend Framework 2. This is for making a user module very fast by extending its available functionality. XOUser stores session data in database. This is mainly a combination of Zend\Db, Zend\Session and Zend\Authentication for managing users persistently.
 
+Version
+-------
+Please use one of versions from below:
+
+|Supported Zend Framework version |
+|---------------------------------|
+| >= 2.2.7 to <= 2.5.0
 
 Features
 --------
 
-* User login - authenticate via username or email (by specifying one of these two).
+* User login - authenticate via username or email (by specifying one of these two and changing that in other places).
 * User registration.
 * User change-password.
 * Forms protected against CSRF.
@@ -20,7 +27,7 @@ Installation
 1. In your project, use the following command on your terminal.
 
 ```bash
-  composer require unclexo/xo-user
+$ composer require unclexo/xo-user
 ```
 
 2. Add this `XOUser` module name in your `application.config.php` file.
@@ -32,6 +39,7 @@ Installation
       // ...
       'XOUser',
     ),
+    // ...
   );
 ```
 
