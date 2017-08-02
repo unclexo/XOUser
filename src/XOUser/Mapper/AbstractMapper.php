@@ -1,14 +1,15 @@
 <?php 
 namespace XOUser\Mapper;
 
-use Zend\Db\Adapter\AdapterInterface;
-use Zend\Db\Adapter\Driver\ResultInterface;
-use Zend\Stdlib\Hydrator\HydratorInterface;
-use Zend\Db\ResultSet\HydratingResultSet;
-use Zend\Db\Sql\Sql;
-use Zend\Stdlib\Hydrator\ClassMethods;
 use XOUser\Entity\User;
 use XOUser\Entity\UserInterface;
+use Zend\Db\Adapter\AdapterInterface;
+use Zend\Db\Adapter\Driver\ResultInterface;
+use Zend\Db\ResultSet\HydratingResultSet;
+use Zend\Db\Sql\Sql;
+use Zend\Db\Sql\TableIdentifier;
+use Zend\Stdlib\Hydrator\ClassMethods;
+use Zend\Stdlib\Hydrator\HydratorInterface;
 
 
 abstract class AbstractMapper
